@@ -27,7 +27,7 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 										<copy overwrite="true" todir="${release.dir}/examples/slee-connectivity">
 											<fileset dir="${basedir}/../slee/du/target">
 												<include name="**.jar" />
@@ -58,7 +58,7 @@
     										<filter token="JBOSS.PATH" value="${jboss.path}" />
     									</filterset>
     								</copy>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>

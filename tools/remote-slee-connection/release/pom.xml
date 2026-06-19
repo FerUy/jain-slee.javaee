@@ -30,13 +30,13 @@
 									<goal>run</goal>
 								</goals>
 								<configuration>
-									<tasks>
+									<target>
 										<copy todir="${release.dir}/tools/remote-slee-connection">
 											<fileset dir="${basedir}/../rar/target/restcomm-slee-remote-connection.rar-beans">
 												<include name="restcomm-slee-remote-connection.rar/**" />
 											</fileset>
 										</copy>
-									</tasks>
+									</target>
 								</configuration>
 							</execution>
 						</executions>

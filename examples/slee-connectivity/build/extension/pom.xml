@@ -131,11 +131,11 @@
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
-                                    <tasks>
+                                    <target>
                                         <copy todir="${jboss.home}/modules/system/layers/base/${module.path}">
                                             <fileset dir="${project.build.directory}/module"/>
                                         </copy>
-                                    </tasks>
+                                    </target>
                                 </configuration>
                             </execution>
                             <execution>
@@ -145,9 +145,9 @@
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
-                                    <tasks>
+                                    <target>
                                         <delete failonerror="false" dir="${jboss.home}/modules/system/layers/base/${module.path}"/>
-                                    </tasks>
+                                    </target>
                                 </configuration>
                             </execution>
                         </executions>
@@ -169,7 +169,7 @@
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
-                                    <tasks>
+                                    <target>
                                         <replace file="${jboss.home}/standalone/configuration/standalone.xml">
                                             <replacetoken><![CDATA[</extensions>]]></replacetoken>
                                             <replacevalue><![CDATA[<extension module="org.restcomm.examples.connectivity.extension"/>
@@ -180,7 +180,7 @@
                                             <replacevalue><![CDATA[<subsystem xmlns="urn:restcomm:slee-connectivity:1.0"/>
   											</profile>]]></replacevalue>
                                         </replace>
-                                    </tasks>
+                                    </target>
                                 </configuration>
                             </execution>
                             <execution>
@@ -190,7 +190,7 @@
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
-                                    <tasks>
+                                    <target>
                                         <replace file="${jboss.home}/standalone/configuration/standalone.xml">
                                             <replacetoken><![CDATA[<extension module="org.restcomm.examples.connectivity.extension"/>]]></replacetoken>
                                             <replacevalue><![CDATA[]]></replacevalue>
@@ -199,7 +199,7 @@
                                             <replacetoken><![CDATA[<subsystem xmlns="urn:restcomm:slee-connectivity:1.0"/>]]></replacetoken>
                                             <replacevalue><![CDATA[]]></replacevalue>
                                         </replace>
-                                    </tasks>
+                                    </target>
                                 </configuration>
                             </execution>
                         </executions>

@@ -84,11 +84,11 @@
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
-                                    <tasks>
+                                    <target>
                                         <copy todir="${jboss.home}/modules/system/layers/base/${module.path}">
                                             <fileset dir="${project.build.directory}/module"/>
                                         </copy>
-                                    </tasks>
+                                    </target>
                                 </configuration>
                             </execution>
                             <execution>
@@ -98,9 +98,9 @@
                                     <goal>run</goal>
                                 </goals>
                                 <configuration>
-                                    <tasks>
+                                    <target>
                                         <delete failonerror="false" dir="${jboss.home}/modules/system/layers/base/${module.path}"/>
-                                    </tasks>
+                                    </target>
                                 </configuration>
                             </execution>
                         </executions>
